@@ -1,0 +1,69 @@
+@import "../../../styles/variables";
+
+.container {
+    display: flex;
+    height: 100%;
+    padding: 0 35px 0 25px;
+    gap: 10px;
+    user-select: none;
+}
+
+.headerChatInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.headerChatInfoAvatar img {
+    margin-top: 4px;
+    width: 44px;
+    height: 44px;
+    border-radius: 80%;
+}
+
+.headerChatInfoTitle {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-weight: 600;
+        color: var(--gray-800)
+    }
+
+    small {
+        color: var(--gray-600)
+    }
+}
+
+.headerChatActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.actionIcon {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    transition: all .3s;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--bluegray-100);
+    }
+}
+
+.actionIconSvg {
+    font-size: 24px;
+    color: var(--bluegray-600);
+}
+
+.containerMenuActions {
+    position: absolute;
+    z-index: 1;
+    top: $app_header_height;
+    right: 40px;
+}

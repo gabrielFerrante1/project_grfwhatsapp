@@ -1,0 +1,134 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+// Variables - Locals
+$border-radius-search: 5px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    user-select: none;
+
+    header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 30px;
+        height: $app_header_height;
+        background-color: var(--app-header-bg);
+        border-left: 1px solid var(--app-divisor-cl);
+
+        svg {
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--bluegray-600);
+        }
+
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 600;
+            color: var(--bluegray-700);
+        }
+    }
+}
+
+.search {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--gray-200);
+
+    .searchBtn {
+        outline: none;
+        border: none;
+        background-color: var(--app-search-input-bg);
+        border-top-left-radius: $border-radius-search;
+        border-bottom-left-radius: $border-radius-search;
+        padding-left: 20px;
+
+        .searchBtnIcon {
+            color: var(--app-icon-cl);
+            font-size: 20px;
+        }
+    }
+
+
+    .searchInput {
+        flex: 1;
+        outline: none;
+        border: none;
+        background-color: var(--app-search-input-bg);
+        border-top-right-radius: $border-radius-search;
+        border-bottom-right-radius: $border-radius-search;
+        padding: 9px;
+        color: var(--gray-600);
+        transition: all .3s;
+
+        &::placeholder {
+            color: var(--gray-600);
+        }
+
+        &:focus {
+            color: var(--gray-700);
+        }
+    }
+}
+
+.messages {
+    flex: 1;
+    @include ScrollOnHover;
+
+    .messageItem {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--gray-200);
+        transition: all .1s;
+        cursor: pointer;
+
+        &:hover {
+            border-color: transparent;
+            background-color: var(--gray-200);
+        }
+    }
+
+    .messageItemDate,
+    .messageItemBody {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 13px;
+    }
+
+    .messageItemDate {
+        color: var(--bluegray-600);
+    }
+
+    .messageItemBody {
+        font-size: 14px;
+        color: var(--bluegray-800);
+    }
+
+    .lettersMatch {
+        font-weight: 900;
+        color: var(--teal-800);
+    }
+}
+
+.emptySearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        color: var(--bluegray-500);
+    }
+}

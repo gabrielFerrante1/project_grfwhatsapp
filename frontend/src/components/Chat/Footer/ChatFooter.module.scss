@@ -1,0 +1,62 @@
+@import "../../../styles/variables";
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 100%;
+    padding: 0 35px 0 25px;
+    user-select: none;
+    position: relative;
+}
+
+.emojiPickerContainer {
+    position: fixed;
+    transition: all .2s;
+    left: $app_sidebar_width;
+    opacity: 0;
+    z-index: 1;
+
+    aside {
+        border-bottom-right-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+}
+
+.emojiPickerOpen {
+    bottom: $app_header_height;
+    opacity: 1; 
+}
+
+.emojiPickerClosed {
+    bottom: -10px;
+    pointer-events: none; 
+}
+
+.footerInput {
+    flex: 1;
+
+    input {
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 12px 15px;
+        border-radius: 6px;
+        font-size: 14px;
+        color: var(--bluegray-900);
+
+        &::placeholder {
+            color: var(--gray-500);
+        }
+    }
+}
+
+.footerIcon {
+    cursor: pointer;
+
+    svg {
+        margin-top: 3px;
+        font-size: 25px;
+        color: var(--bluegray-600);
+    }
+}

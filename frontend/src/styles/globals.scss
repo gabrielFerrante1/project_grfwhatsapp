@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --app-header-bg: #f0f2f5;
+  --app-icon-cl: #54656f;
+  --app-divisor-cl: #eaeaeb;
+  --app-search-input-bg: #f0f2f5;
+  --page-background: #f0f2f5;
+  ;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {}
+}

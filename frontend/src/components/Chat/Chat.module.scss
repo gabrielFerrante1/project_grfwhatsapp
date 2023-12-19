@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.containerHeader {
+    height: $app_header_height;
+}
+
+.containerBody {
+    background-color: #efeae2;
+    background-image: url("/assets/images/chat-background.png"); 
+    flex: 1;
+    @include ScrollOnHover;
+}
+
+.containerFooter {
+    height: $app_header_height;
+}

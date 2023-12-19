@@ -1,0 +1,173 @@
+.bodyLoadingMessagesProgressBar {
+    height: 3px;
+}
+
+.bodyContainerMessages {
+    padding: 20px 40px;
+}
+
+.messageContext {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .messageContextDate {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 0;
+
+        span {
+            border-radius: 5px;
+            padding: 7px 14px;
+            color: var(--bluegray-500);
+            font-size: 14px;
+            background-color: rgb(254, 2554, 254);
+        }
+    }
+}
+
+.messageItemContainer {
+    display: flex;
+
+    .messageItem {
+        display: flex;
+        gap: 8px;
+        font-size: 15px;
+        color: var(--gray-900);
+        padding: 8px 18px 6px 12px;
+        max-width: 500px;
+        position: relative;
+        transition: all .6s;
+
+        span {
+            word-break: break-all;
+            text-align: justify;
+        }
+    }
+}
+
+.myMessage {
+    justify-content: flex-end;
+
+    .messageItem {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: rgb(217, 253, 211);
+        padding-bottom: 5px;
+    }
+}
+
+.messageFromOther {
+    justify-content: flex-start;
+
+    .messageItem {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.messageItemSendDate {
+    display: flex;
+    align-items: flex-end;
+    margin: 7px -4px 0 4px;
+    font-size: 12px;
+    color: var(--gray-600);
+}
+
+.messageItemActions {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: all .3s;
+    background-color: inherit;
+    padding: 0 0 0 5px;
+
+    .messageItemActionsDeleteIcon {
+        cursor: pointer;
+        color: var(--red-500);
+        font-size: 20px;
+    }
+
+}
+
+
+.focusedMessage {
+    .messageItem {
+        background-color: rgb(245, 241, 27);
+    }
+}
+
+.messageItem:hover>.messageItemActions {
+    right: 6px;
+    opacity: 1;
+}
+
+.messageItemStatus {
+    margin-top: 6px;
+    display: flex;
+    align-items: flex-end;
+
+    .messageItemStatusIcon {
+        font-size: 17px;
+        transition: all .8s;
+    }
+}
+
+.messageItemDeleted {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bluegray-600);
+
+    svg {
+        margin-top: -1px;
+        font-size: 17px;
+    }
+}
+
+// CSS - Component - Audio Controls
+
+.containerAudio {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    gap: 15px;
+}
+
+.audioControl {
+    svg {
+        cursor: pointer;
+        font-size: 26px;
+        color: var(--bluegray-600);
+        transition: all .2s;
+
+        &:hover {
+            color: var(--teal-600);
+        }
+    }
+}
+
+.audioData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 9px;
+    gap: 2px;
+    width: 100%;
+}
+
+.audioDataTime {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        font-size: 12px;
+        color: var(--bluegray-500);
+    }
+}

@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 25px;
+    height: $app_header_height;
+    width: $app_sidebar_width;
+    background-color: var(--app-header-bg);
+}
+
+.avatar {
+    margin-top: 4px;
+
+    .avatarImg {
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+    }
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .optionsIcon {
+        cursor: pointer;
+        color: var(--app-icon-cl);
+    }
+}

@@ -1,0 +1,118 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+// Variables - Locals
+$border-radius-search: 5px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    user-select: none;
+
+    header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 30px;
+        height: $app_header_height;
+        background-color: var(--app-header-bg);
+        border-left: 1px solid var(--app-divisor-cl);
+
+        svg {
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--bluegray-600);
+        }
+
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 600;
+            color: var(--bluegray-700);
+        }
+    }
+}
+
+.contactDataContainer {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contactData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--app-divisor-cl);
+
+    .contactDataImage {
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%
+        }
+    }
+
+    .contactDataInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .contactDataName,
+        .contactDataEmail {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 90%;
+        }
+
+        .contactDataName {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--bluegray-900);
+        }
+
+        .contactDataEmail {
+            font-size: 15px;
+            color: var(--bluegray-600);
+        }
+    }
+}
+
+.contactActions {}
+
+.contactActionsItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background-color: var(--gray-200);
+    }
+
+    .contactActionsItemIcon {
+        margin-top: 4px;
+
+        svg {
+            font-size: 24px;
+        }
+    }
+
+    .contactActionsLabel {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 700;
+    }
+}

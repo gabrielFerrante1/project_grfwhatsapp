@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.app {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.appSideBar {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--app-divisor-cl);
+    user-select: none;
+
+    .appSideBarBody {
+        flex: 1;
+    }
+}
+
+.appSideBarRight {
+    transition: all .4s;
+}
+
+.appMain {
+    background-color: var(--page-background);
+    flex: 1;
+    overflow: hidden;
+}

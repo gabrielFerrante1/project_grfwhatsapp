@@ -1,0 +1,1 @@
+export type AppModes = 'default' | 'chat';

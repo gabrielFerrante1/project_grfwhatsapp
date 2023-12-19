@@ -1,0 +1,165 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+// Variables - Locals
+$border-radius-search: 5px;
+
+.container {}
+
+.search {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--gray-200);
+
+    .searchBtn {
+        outline: none;
+        border: none;
+        background-color: var(--app-search-input-bg);
+        border-top-left-radius: $border-radius-search;
+        border-bottom-left-radius: $border-radius-search;
+        padding-left: 20px;
+
+        .searchBtnIcon {
+            color: var(--app-icon-cl);
+            font-size: 20px;
+        }
+    }
+
+
+    .searchInput {
+        flex: 1;
+        outline: none;
+        border: none;
+        background-color: var(--app-search-input-bg);
+        border-top-right-radius: $border-radius-search;
+        border-bottom-right-radius: $border-radius-search;
+        padding: 9px;
+        color: var(--gray-600);
+        transition: all .3s;
+
+        &::placeholder {
+            color: var(--gray-600);
+        }
+
+        &:focus {
+            color: var(--gray-700);
+        }
+    }
+}
+
+.messages {
+    width: $app_sidebar_width;
+    height: calc(100vh - 114.5px);
+    @include ScrollOnHover;
+
+    .messagePreviewItem {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 18px 20px 0 20px;
+        cursor: pointer;
+        transition: all .1s;
+
+        &:hover {
+            background-color: var(--gray-200);
+        }
+
+        .avatarImg {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    .messageInfo {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--gray-200);
+    }
+
+    .messageInfoData {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .messageInfoDataTitle {
+            font-size: 17.5px;
+            color: var(--gray-800);
+            font-weight: 600;
+        }
+
+        .messageInfoDataDate {
+            display: flex;
+            justify-content: flex-end;
+
+            span {
+                font-size: 13px;
+                color: var(--gray-800);
+            }
+
+            .messageInfoDataDateActive {
+                font-weight: 600;
+                color: var(--green-600);
+            }
+        }
+
+        .messageInfoDataBody {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+
+            .messageInfoDataBodyIcon {
+                font-size: 17px;
+                color: var(--gray-500);
+            }
+
+            span {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: calc($app_sidebar_width - 200px);
+                font-size: 15px;
+            }
+        }
+
+        .chatBodyEmptyIcon {
+            font-size: 20px;
+            color: var(--bluegray-600);
+        }
+
+        .chatBodyEmpty {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 13px;
+            font-weight: 600;
+            width: calc($app_sidebar_width - 200px);
+            color: var(--gray-600);
+        }
+
+        .messageInfoDataMessagesCount {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            span {
+                display: flex;
+                align-items: center;
+                padding: 0 6px;
+                height: 20px;
+                border-radius: 90px;
+                background-color: var(--green-400);
+                color: white;
+                font-size: 13px;
+                font-weight: 600;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 50px;
+                width: fit-content;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input {
+    width: 400px;
+    background: transparent;
+    outline: none;
+    border: 2px solid var(--teal-500);
+    border-radius: 5px;
+    padding: 13px 15px;
+}
+
+.description {
+    font-size: 15px;
+}
+
+.descriptionAction {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--teal-600);
+}
+
+.btn {
+    margin-top: 25px;
+}

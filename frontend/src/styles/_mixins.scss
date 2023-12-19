@@ -1,0 +1,29 @@
+@mixin ScrollOnHover {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar-track {
+            background: rgb(245, 245, 245);
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgb(190, 190, 190);
+            border-radius: 10em;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #a1a1a1;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.container {
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background: var(--page-background);
+    transition: all .8s;
+}
+
+.containerBody {
+    width: 100%;
+    height: 100%;
+    transition: all .6s;
+}
+
+.containerLoading {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logoIcon {
+
+        color: var(--teal-600);
+        font-size: 40px;
+    }
+}
+
+.title {
+    margin-top: 26px;
+    font-size: 19.5px;
+    font-weight: 700;
+    color: var(--gray-600);
+}
+
+.progressBar {
+    margin-top: 38px;
+    width: 320px;
+}
+
+.cryptography {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cryptographyIcon,
+.cryptographyText {
+    color: var(--gray-600);
+}
+
+.cryptographyIcon {
+    font-size: 13px;
+}
+
+.cryptographyText {
+    font-size: 14px;
+}
